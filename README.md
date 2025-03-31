@@ -1,4 +1,4 @@
-# Human Flourishing Project Notebook
+# The Geography of Human Flourishing - Project Notebook
 This is a simple notebook that shows (partial) results of the LLM analysis of the 2.2 billion subset of USA tweets extracted from the global Harvard's [Twitter Geolocated Archive](https://gis.harvard.edu/geotweets-archive-v20). 
 
 Computation is not finished yet.

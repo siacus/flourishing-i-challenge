@@ -4,7 +4,7 @@ This is a simple notebook that shows (partial) results of the LLM analysis of th
 Computation is not finished yet.
 You can explore partial results (year >= 2012) for some of the 46 flourishing dimensions. We suggest to explore ```happiness`` for the moment. See sample results below:
 
-![alt text](https://drive.google.com/file/d/1cEf22kA8_owNqivMagXZWS7IqARpuIZN/view?usp=sharing)
+![alt text](https://github.com/siacus/flourishing-i-challenge/blob/main/Happiness_Index.png)
 
 The analysis was run at Census ID level and aggreagated at County and State level by year.
 

@@ -1,4 +1,5 @@
 # The Geography of Human Flourishing - Project Notebook
+Team: Stefano Iacus, Devika Jain, Andrea Nasuto
 
 ## Project Summary
 The Human Flourishing Program is a research initiative whose goal is to study and promote human flourishing across a broad spectrum of life domains, integrating interdisciplinary research in social sciences, philosophy, psychology, and other fields. The Global Flourishing Study (GFS), a five-year traditional longitudinal data collection on approximately 200,000 participants from 20+ geographically and culturally diverse countries and territories, measures global human flourishing in six areas: Happiness and life satisfaction; Mental and physical health; Meaning and purpose; Character and virtue; Close social relationships and Material and financial stability. Our research plan is to analyze Harvard’s collection of 10 billion geolocated tweets from 2010 to mid-2023. The project will apply large language models, to extract 46 human flourishing dimensions across the six areas of human flourishing, generate high-resolution spatio-temporal indicators and produce interactive tools to visualize and analyze the result.

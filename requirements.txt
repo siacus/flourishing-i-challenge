@@ -1,0 +1,4 @@
+geopandas
+pandas
+matplotlib
+datasets

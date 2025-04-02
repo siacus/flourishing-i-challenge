@@ -22,7 +22,7 @@ state_plot = state_df[(state_df["variable"] == var) & (state_df["year"] == yr)].
 county_plot = county_df[(county_df["variable"] == var) & (county_df["year"] == yr)].copy()
 
 state_plot["FIPS"] = state_plot["FIPS"].apply(lambda x: f"{int(x):02d}")
-county_plot["FIPS_county"] = county_plot["FIPS_county"].apply(lambda x: f"{int(x):05d}")
+county_plot["StateCounty"] = county_plot["StateCounty"].apply(lambda x: f"{int(x):05d}")
 
 # -----------------------------
 # Load shapefiles
@@ -41,8 +41,8 @@ counties = counties[~counties["STATEFP"].isin(["02", "15", "72"])]
 states["FIPS"] = states["STATEFP"]
 state_map = states.merge(state_plot, on="FIPS", how="left")
 
-counties["FIPS_county"] = counties["STATEFP"] + counties["COUNTYFP"]
-county_map = counties.merge(county_plot, on="FIPS_county", how="left")
+counties["StateCounty"] = counties["STATEFP"] + counties["COUNTYFP"]
+county_map = counties.merge(county_plot, on="StateCounty", how="left")
 
 # -----------------------------
 # Plot maps side by side

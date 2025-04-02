@@ -36,7 +36,7 @@ county_plot_data <- county_data[variable == var & year == yr]
 
 # Ensure correct FIPS formatting
 state_plot_data[, FIPS := sprintf("%02s", FIPS)]
-county_plot_data[, FIPS_county := sprintf("%05s", FIPS_county)]
+county_plot_data[, StateCounty := sprintf("%05s", StateCounty)]
 
 # -----------------------------
 # Load and prep shapefiles
@@ -55,7 +55,7 @@ counties$GEOID <- sprintf("%05s", counties$GEOID)
 # Merge data with maps
 # -----------------------------
 map_state <- merge(states, state_plot_data, by.x = "STATEFP", by.y = "FIPS", all.x = TRUE)
-map_county <- merge(counties, county_plot_data, by.x = "GEOID", by.y = "FIPS_county", all.x = TRUE)
+map_county <- merge(counties, county_plot_data, by.x = "GEOID", by.y = "StateCounty", all.x = TRUE)
 
 # -----------------------------
 # Create plots

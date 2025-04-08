@@ -14,10 +14,10 @@ The Geography of Human Flourishing research plan is to analyze Harvard’s colle
 Given the scalability challenge, this project analyzes in parallel also the so-called *migration mood* and the perception of *corruption*. Well-being, migration mood and corruption are topics that are tradionally studied in couples (migration mood vs happiness; migration and corruption; corruption and well-being). This research project will study the interplay of these three large areas of research.
 
 ## Methodology
-
-# This will setup you to run inference on fasrc
-# Do not use mamba, use conda/minicoda and give the exact same commands or gpu workflow won't work
-# how I build the conda environment that I use to fine-tune and inference
+'''
+### This will setup you to run inference on fasrc
+### Do not use mamba, use conda/minicoda and give the exact same commands or gpu workflow won't work
+### how I build the conda environment that I use to fine-tune and inference
 module load anaconda
 conda create -n jago python=3.10
 conda activate jago
@@ -28,22 +28,22 @@ pip install psutil
 ### HOW TO BUILD llama-cpp-python ###
 #####################################
 #
-# llama-ccp-python is used to run GGUF models in python
-# a simple "pip install llama-cpp-python" will not
-# install the GPU version
-# 1. spin the gpu instance
+### llama-ccp-python is used to run GGUF models in python
+### a simple "pip install llama-cpp-python" will not
+### install the GPU version
+### 1. spin the gpu instance
 salloc -p gpu_test --gres=gpu:1 --mem=40G -N 1 -t 2:00:00
-# 2. load the modules as in the above
+### 2. load the modules as in the above
 module load modtree/gpu   # default gcc and cuda version too old
 module load cuda/11  # the version of cuda and gcc shold match on this cluster
 module load gcc/11
 module load anaconda
 module list
-# 3. activate the env to have it installed properly
+### 3. activate the env to have it installed properly
 conda activate jago
-# 4. build it. Takes forever
+### 4. build it. Takes forever
 CMAKE_ARGS="-DGGML_CUDA=on" pip install llama-cpp-python
-# wait a few hours
+### wait a few hours
 '''
 
 

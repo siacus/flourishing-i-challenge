@@ -15,11 +15,12 @@ These scripts assume you have an account on an ACCESS cluster or FARSC.
 * project directory:  ```$PROJECT``` or ```/anvil/projects/x-soc250007``` (adjust)
 * scratch folder: ```/anvil/scratch/x-siacus/``` (adjust)
 
-## ACCESS accounts: Anvil
+## ACCESS accounts: Delta-AI
 * create an ACCESS account [here](https://operations.access-ci.org/identity/new-user) 
-* login via SSH: follow the instructions [here](https://www.rcac.purdue.edu/knowledge/anvil/access/login). Essentially: First login to the web [Open OnDemand interface](https://ondemand.anvil.rcac.purdue.edu) using your ACCESS username and password, and then upload your public key by launching a shell from ODD console.
-* configuring VSCODE: I find this [link](https://github.com/KempnerInstitute/kempner-computing-handbook/blob/main/kempner_computing_handbook/development_and_runtime_envs/using_vscode_for_remote_development.md) useful
-* general instructions on how to run jobs on Delta-AI [here](https://docs.ncsa.illinois.edu/systems/deltaai/en/latest/user-guide/running-jobs.html#partitions-queues), and specifically [GPU jobs](https://www.rcac.purdue.edu/knowledge/anvil/run/examples/slurm)
+* login via SSH: follow the instructions [here](https://docs.ncsa.illinois.edu/systems/deltaai/en/latest/user-guide/login.html#ssh-examples).
+* [Open OnDemand interface](https://gh-ondemand.delta.ncsa.illinois.edu/) using your NCSA username and password.
+* configuring VSCODE: read this [page](https://docs.ncsa.illinois.edu/systems/deltaai/en/latest/user-guide/vscode/remote-ssh.html)
+* general instructions on how to run jobs on Delta-AI [here](https://docs.ncsa.illinois.edu/systems/deltaai/en/latest/user-guide/running-jobs.html#partitions-queues)
 * home directory ```/u/siacus``` (adjust)
 * project directory:  ```$PROJECT``` or ```/projects/befu/siacus/``` (adjust)
 

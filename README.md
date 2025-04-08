@@ -58,8 +58,7 @@ The Harvard Center for Geographic Analysis (CGA) maintains the Geotweet Archive,
 
 ### County Level Climate and Resilience Index for USA (Source: AlphaGeo)
 
-[AlphaGeo's Global Climate Risk and Resilience Index](https://docs.alphageo.ai/products/climate-risk-and-resilience-index/the-alphageo-advantage-climate-risk-and-resilience-index) is a unique two-in-one scoring suite of (1) Physical Risk and (2) Resilience-adjusted Risk. Together, these deliver risk and resilience assessments at scale.
-
+[AlphaGeo's Global Climate Risk and Resilience Index](https://docs.alphageo.ai/products/climate-risk-and-resilience-index/the-alphageo-advantage-climate-risk-and-resilience-index) is a unique two-in-one scoring suite of (1) Physical Risk and (2) Resilience-adjusted Risk. Together, these deliver risk and resilience assessments at scale. Explore the dataset [here](https://www.washingtonpost.com/climate-environment/interactive/2024/climate-risk-resilience-factors-us-cities/)
 ![alt text](https://github.com/siacus/flourishing-i-challenge/blob/main/climate_risk.png)
 
 

@@ -6,17 +6,28 @@ What follows is a simplified set of instructions for replicability and some note
 Some tweaking are inevitable, like changing the account, allocation, SLURM partition names and folders.
 
 These scripts assume you have an account on an ACCESS cluster or FARSC.
-# ACCESS accounts
+## ACCESS accounts
 * create an ACCESS account [here](https://operations.access-ci.org/identity/new-user) 
 * login via SSH: follow the instructions [here](https://www.rcac.purdue.edu/knowledge/anvil/access/login). Essentially: First login to the web [Open OnDemand interface](https://ondemand.anvil.rcac.purdue.edu) using your ACCESS username and password, and then upload your public key by launching a shell from ODD console.
 * configuring VSCODE: I find this [link](https://github.com/KempnerInstitute/kempner-computing-handbook/blob/main/kempner_computing_handbook/development_and_runtime_envs/using_vscode_for_remote_development.md) useful
 * general instructions on how to run jobs on Anvil [here](https://www.rcac.purdue.edu/knowledge/anvil/run), and specifically [GPU jobs](https://www.rcac.purdue.edu/knowledge/anvil/run/examples/slurm)
 * to know which partitions are available ```showpartitions```
-* Home directory ```/home/x-siacus``` (adjust)
+* home directory ```/home/x-siacus``` (adjust)
 * project directory:  ```$PROJECT``` or ```/anvil/projects/x-soc250007``` (adjust)
 * scratch folder: ```/anvil/scratch/x-siacus/``` (adjust)
 
+## FASRC accounts
+* login via SSH: follow the instructions [here](https://docs.rc.fas.harvard.edu/kb/ssh-to-a-compute-node/). Essentially: First login to the web [Open OnDemand interface](https://rcood.rc.fas.harvard.edu/pun/sys/dashboard/) using your FASRC username and password, and then upload your public key by launching a shell from ODD console.
+* configuring VSCODE: I find this [link](https://github.com/KempnerInstitute/kempner-computing-handbook/blob/main/kempner_computing_handbook/development_and_runtime_envs/using_vscode_for_remote_development.md) useful
+* general instructions on how to run jobs on FASRC [here](https://docs.rc.fas.harvard.edu/kb/running-jobs/), and specifically [GPU jobs](https://docs.rc.fas.harvard.edu/wp-content/uploads/2013/10/GPU_Computing_9_26.pdf)
+* home directory ```/n/home11/siacus``` (adjust)
+* scratch folder: ```/n/netscratch/siacus_lab``` (adjust)
 
+#### Useful SLURM commands
+* to know which partitions are available ```showpartitions```
+* to know jour jobs ```squeue | grep siacus```   # (adjust username)
+* to kill jour jobs ```scancel job_num```
+  
 ## Setting up a Conda Environment
 All scripts run in a conda environment DO NOT USE MAMBA !
 

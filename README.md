@@ -32,9 +32,9 @@ This is a simple notebook that shows (partial) results of the LLM analysis of th
 
 ## How this Repository is Structured
 The project involves three main steps:
-* [finetuning](./scripts//finetuning) of LLMs
-* [classification](./scripts/classification) of raw tweets
-* construction of statistical [indicators](./scripts/indicators)
+* finetuning of LLMs
+* classification of raw tweets
+* construction of statistical indicators
 and for each step we provide the [scripts](./scripts) in python and R used to perform each of them. Please check each individual subfolder.
 
 

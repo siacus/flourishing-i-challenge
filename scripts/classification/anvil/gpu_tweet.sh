@@ -1,31 +1,14 @@
 #!/bin/bash
 
-# STEFANO: ./gpu_tweet_usa-cuda.sh 2014 1000 '47:59:59'
-# STEFANO: ./gpu_tweet_usa-cuda.sh 2015 1000 '47:59:59'
-# STEFANO: ./gpu_tweet_usa-cuda.sh 2020 1000 '47:59:59'
-# STEFANO: ./gpu_tweet_usa-cuda.sh 2022 1000 '47:59:59'
-# STEFANO: ./gpu_tweet_usa-cuda.sh 2023 1000 '47:59:59'
-
-# DEVIKA: ./gpu_tweet_usa-cuda-devika.sh 2013 1000 '47:59:59'
-# DEVIKA: ./gpu_tweet_usa-cuda-devika.sh 2017 1000 '47:59:59'
-# DEVIKA: ./gpu_tweet_usa-cuda-devika.sh 2021 1000 '47:59:59'
-
-# ANDREA: ./gpu_tweet_usa-cuda-andrea.sh 2016 1000 '47:59:59'
-# ANDREA: ./gpu_tweet_usa-cuda-andrea.sh 2018 1000 '47:59:59'
-# ANDREA: ./gpu_tweet_usa-cuda-andrea.sh 2019 1000 '47:59:59'
-
-# scancel -u $USER
+# ./gpu_tweet_usa.sh 2023 3 '00:10:00'
 # SBATCH script to be executed
-# SBATCH_SCRIPT="process_USA-batch.sbatch"
-SBATCH_SCRIPT="process_USA-fasrc-cuda.sbatch"
+SBATCH_SCRIPT="process_classify.sbatch"
 
 # Source directory for .csv.gz files
-# TWEET_DIR="/anvil/projects/x-soc250007/tweets_us_census"   # ANVIL
-TWEET_DIR="/n/netscratch/cga/Lab/xiaokang/tweets_us_census_by_day/" # FASRC
+TWEET_DIR="/anvil/projects/x-soc250007/tweets_us_census"
 
 # General log directory within geotweets
-# LOG_DIR="/anvil/scratch/x-siacus/log" # ANVIL
-LOG_DIR="/n/netscratch/siacus_lab/Lab/log/" # FASRC
+LOG_DIR="/anvil/scratch/x-siacus/log"
 FILES_COMPLETED_LOG="${LOG_DIR}/files_completed.txt"
 
 # Directories for stdout and stderr
@@ -103,6 +86,7 @@ for FILE in "${FILES_TO_PROCESS[@]}"; do
         echo "Reached the maximum number of jobs (${NUM_JOBS}). Exiting."
         break
     fi
+    
     # Sleep briefly to be kind to the scheduler
     sleep 1
 done

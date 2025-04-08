@@ -1,14 +1,14 @@
 #!/bin/bash
 # (c) SMI 2025
-# ./gpu_tweet_usa.sh 2014 3 '47:59:59'
-# SBATCH script to be executed
-SBATCH_SCRIPT="process_USA-batch.sbatch"
+#  ./gpu_tweet_usa.sh 2014 1000 '47:59:59'
+
+SBATCH_SCRIPT="process_classify.sbatch"
 
 # Source directory for .csv.gz files
-TWEET_DIR="/projects/befu/siacus/tweets_us_census"
+TWEET_DIR="/n/netscratch/cga/Lab/xiaokang/tweets_us_census_by_day/" # FASRC
 
 # General log directory within geotweets
-LOG_DIR="/projects/befu/siacus/log"
+LOG_DIR="/n/netscratch/siacus_lab/Lab/log/" # FASRC
 FILES_COMPLETED_LOG="${LOG_DIR}/files_completed.txt"
 
 # Directories for stdout and stderr
@@ -86,7 +86,6 @@ for FILE in "${FILES_TO_PROCESS[@]}"; do
         echo "Reached the maximum number of jobs (${NUM_JOBS}). Exiting."
         break
     fi
-    
     # Sleep briefly to be kind to the scheduler
     sleep 1
 done

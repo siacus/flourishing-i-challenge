@@ -1,16 +1,5 @@
-# build llama-cpp-python as in "various_cluster_intructions.txt"
-# the do the followin
-# 
-# you can make it a sbatch script
-#
-# sinteractive -p shared  -N 1 -n 4 -A soc250007 -t 2:0:0
-# sinteractive -p gpu -N 1 -n 1 -A soc250007-gpu --gres=gpu:1 -t 2:0:0
-# module load modtree/gpu   # default gcc and cuda version too old
-# module load cuda/11  # the version of cuda and gcc shold match on this cluster
-# module load gcc/11
-# module load anaconda
-# module list
-# conda activate jago
+# classification script
+# (c) SMI 2025
 
 import os
 import time
@@ -24,17 +13,11 @@ import subprocess
 import sys
 from datetime import datetime
 import glob
-import psutil  # To check CPU memory
+import psutil
 
+batch_size = 250 
 
-#from fastparquet import ParquetFile, write
-
-# test: parquet_file = "/anvil/projects/x-soc250007/tweets_us_census/2023/2023-06-14.parquet"
-# outofmem: parquet_file = "/anvil/projects/x-soc250007/tweets_us_census/2023/2023-01-05.parquet"
-# cpu: parquet_file = "/anvil/projects/x-soc250007/tweets_us_census/2010/2010-10-16.parquet"
-batch_size = 250 #250
-
-scratch = "/anvil/scratch/x-siacus"
+scratch = "/n/netscratch/siacus_lab/Lab/" # FASRC
 log_dir = os.path.join(scratch, "log") # log dir
 out_dir = os.path.join(scratch, "output") # output dir, where to save classifications
 gguf_dir = os.path.join(scratch, "gguf") # the directory that conain the quantized LLMs
@@ -45,8 +28,6 @@ os.makedirs(out_dir, exist_ok=True) # Creates output dir
 
 FAILED_LOG_FILE = os.path.join(log_dir, "files_failed2load.csv")
 FILES_COMPLETED_LOG = os.path.join(log_dir, "files_completed.txt")
-
-
 
 
 if len(sys.argv) < 2:
@@ -90,7 +71,6 @@ mod_COR_path = os.path.join(gguf_dir, mod_COR)
 mod_MIG_path = os.path.join(gguf_dir, mod_MIG)
 
 
-
 def check_memory():
     """Check GPU memory if available; otherwise, check CPU memory."""
     # Try checking GPU memory using nvidia-smi
@@ -114,8 +94,6 @@ def check_memory():
 
 # Example usage
 check_memory()
-
-print("Loading models...")
 
 # Load LLaMA model with optimized settings
 llm_SWB = Llama(
@@ -142,10 +120,9 @@ llm_MIG = Llama(
     verbose=False
 )
 
-print("Models loaded successfully on memory.")
+print("Models loaded successfully.")
 check_memory()
-
-  
+ 
 
 # PROMPTS
 
@@ -346,13 +323,6 @@ def get_last_batch(fname):
 
 restart_batch = get_last_batch(fname) 
 
-# If the file exists, check schema to match columns before appending
-# if os.path.exists(output_file):
-#     existing_pf = ParquetFile(output_file)
-#     existing_cols = existing_pf.columns
-# else:
-#     existing_cols = None
-
 texts = df['text']
 ids = df['message_id']
 n = len(texts)
@@ -367,23 +337,16 @@ if restart_batch >= n:
 start_time = time.time()
 for batch_start in tqdm(range(restart_batch, n, batch_size), desc="Processing batches"):
     try:
-        print(f"Start = {batch_start}")
         batch = texts[batch_start: batch_start + batch_size]
         batch_ids = ids[batch_start: batch_start + batch_size]
         batch_ids_reset = batch_ids.reset_index(drop=True)
-        print("doing SWB")
         batch_SWB = [askLLM_SWB(text) for text in batch]
-        print("end SWB")
         batch_SWB = pd.concat(batch_SWB, ignore_index=True)
-        batch_SWB['id'] = batch_ids_reset   
-        print("doing COR")
+        batch_SWB['id'] = batch_ids_reset    
         batch_COR = [askLLM_COR(text) for text in batch]
-        print("end COR")
         batch_COR = pd.concat(batch_COR, ignore_index=True)
         batch_COR['id'] = batch_ids_reset   
-        print("doing MIG")
         batch_MIG = [askLLM_MIG(text) for text in batch]
-        print("end MIG")
         batch_MIG = pd.concat(batch_MIG, ignore_index=True)
         batch_MIG['id'] = batch_ids_reset
         merged_df = batch_MIG.merge(batch_COR, on='id', how='outer').merge(batch_SWB, on='id', how='outer')
@@ -395,7 +358,6 @@ for batch_start in tqdm(range(restart_batch, n, batch_size), desc="Processing ba
         column_order = ['id'] + [col for col in final_df.columns if col != 'id']
         final_df = final_df[column_order]
         final_df.rename(columns={'id': 'message_id'}, inplace=True)
-#        final_df.to_csv(output_file, mode='a', index=False, header=not batch_start, encoding='utf-8')
         start = batch_start
         end = batch_start+batch_size
         batch_output_file = os.path.join(scratch, "output", f"{fname}_batch_{start}_{end}.parquet")
@@ -406,5 +368,10 @@ for batch_start in tqdm(range(restart_batch, n, batch_size), desc="Processing ba
 
 end_time = time.time()
 print(f"Time spent running the code: {end_time - start_time:.2f} seconds")
+
+print(f"File {parquet_file} completed!")
+with open(FILES_COMPLETED_LOG, "a") as comp_file:
+    comp_file.write(f"{parquet_file}\n")
+
 
 

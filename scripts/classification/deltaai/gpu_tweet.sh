@@ -1,17 +1,14 @@
 #!/bin/bash
-
-# ./gpu_tweet_usa.sh 2023 3 '00:10:00'
-# ./gpu_tweet_usa.sh 2023 100 '23:59:59'
-# ./gpu_tweet_usa.sh 2023 100 '1:59:59'
-# scancel -u $USER
+# (c) SMI 2025
+# ./gpu_tweet.sh 2014 3 '47:59:59'
 # SBATCH script to be executed
-SBATCH_SCRIPT="process_USA-batch.sbatch"
+SBATCH_SCRIPT="process_classify.sbatch"
 
 # Source directory for .csv.gz files
-TWEET_DIR="/anvil/projects/x-soc250007/tweets_us_census"
+TWEET_DIR="/projects/befu/siacus/tweets_us_census"
 
 # General log directory within geotweets
-LOG_DIR="/anvil/scratch/x-siacus/log"
+LOG_DIR="/projects/befu/siacus/log"
 FILES_COMPLETED_LOG="${LOG_DIR}/files_completed.txt"
 
 # Directories for stdout and stderr

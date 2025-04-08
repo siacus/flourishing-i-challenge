@@ -14,7 +14,7 @@ The Geography of Human Flourishing research plan is to analyze Harvard’s colle
 Given the scalability challenge, this project analyzes in parallel also the so-called *migration mood* and the perception of *corruption*. Well-being, migration mood and corruption are topics that are tradionally studied in couples (migration mood vs happiness; migration and corruption; corruption and well-being). This research project will study the interplay of these three large areas of research.
 
 ## Methodology
-'''
+```
 ### This will setup you to run inference on fasrc
 ### Do not use mamba, use conda/minicoda and give the exact same commands or gpu workflow won't work
 ### how I build the conda environment that I use to fine-tune and inference
@@ -44,8 +44,7 @@ conda activate jago
 ### 4. build it. Takes forever
 CMAKE_ARGS="-DGGML_CUDA=on" pip install llama-cpp-python
 ### wait a few hours
-'''
-
+```
 
 ## The Twitter Dataset
 

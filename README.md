@@ -4,14 +4,13 @@ Team of the [Spatial AI-Challenge 2024](https://i-guide.io/spatial-ai-challenge-
 Other co-authors related to this project: Giuseppe Porro, Marcello Carammia, Andrea Vezzulli.
 
 ## Project Summary
-[The Human Flourishing Program](https://hfh.fas.harvard.edu) is a research initiative whose goal is to study and promote human flourishing across a broad spectrum of life domains, integrating interdisciplinary research in social sciences, philosophy, psychology, and other fields. The [Global Flourishing Study](https://hfh.fas.harvard.edu/global-flourishing-study) (GFS), a five-year traditional longitudinal data collection on approximately 200,000 participants from 20+ geographically and culturally diverse countries and territories, measures global human flourishing in six areas: Happiness and life satisfaction; Mental and physical health; Meaning and purpose; Character and virtue; Close social relationships and Material and financial stability. 
+[The Human Flourishing Program](https://hfh.fas.harvard.edu) is a research initiative whose goal is to study and promote human flourishing across a broad spectrum of life domains, integrating interdisciplinary research in social sciences, philosophy, psychology, and other fields. The [Global Flourishing Study](https://hfh.fas.harvard.edu/global-flourishing-study) (GFS), a five-year traditional longitudinal data collection on approximately 200,000 participants from 20+ geographically and culturally diverse countries and territories, measures global human flourishing in six areas: Happiness and life satisfaction; Mental and physical health; Meaning and purpose; Character and virtue; Close social relationships and Material and financial stability.
 
-The Geography of Human Flourishing research plan is to analyze Harvard’s collection of 10 billion geolocated tweets from 2010 to mid-2023 in view of the six areas identified by the GFS. The project applies fine-tuned large language models (LLMs) to extract 46 human flourishing dimensions across the six areas, generate high-resolution spatio-temporal indicators.
-For the Spatial AI-Challenge 2024, the project analyzes a subset of 2.2 billion tweets geolocalized in the USA and generates  interactive visualization tools.
+## Our Approach
+
+The Geography of Human Flourishing research plan is to analyze Harvard’s collection of 10 billion geolocated tweets from 2010 to mid-2023 in view of the six areas identified by the GFS. The project applies <a>fine-tuned large language models (LLMs)> https://arxiv.org/abs/2411.00890 </a> to extract 46 human flourishing dimensions across the six areas, generate high-resolution spatio-temporal indicators.  The project will apply large language models, to extract 46 human flourishing dimensions across the six areas of human flourishing, generate high-resolution spatio-temporal indicators and produce interactive tools to visualize and analyze the result. For the Spatial AI-Challenge 2024, the project analyzes a subset of 2.2 billion tweets geolocalized in the USA and generates  interactive visualization tools.
 
 Given the scalability challenge, this project analyzes in parallel also the so-called *migration mood* and the perception of *corruption*. Well-being, migration mood and corruption are topics that are tradionally studied in couples (migration mood vs happiness; migration and corruption; corruption and well-being). This research project will study the interplay of these three large areas of research.
-
-
 
 ## The Twitter Dataset
 
@@ -19,11 +18,6 @@ The Harvard Center for Geographic Analysis (CGA) maintains the Geotweet Archive,
 
 ![alt text](https://github.com/siacus/flourishing-i-challenge/blob/main/map_tweets_language.png)
 
-## More about this Project
-
-This repository contain partial results from [The Geography of Human Flourishing Project](https://i-guide.io/spatial-ai-challenge-2024/accepted-abstracts/) analysis for the years 2010-2023 and all scripts and models used.
-
-This project is one of the 10 national projects awarded within the [Spatial AI-Challange 2024](https://i-guide.io/spatial-ai-challenge-2024/), an international initiative at the crossroads of geospatial science and artificial intelligence.
 
 ## Deliverables of The Project
 
@@ -36,6 +30,16 @@ The project involves three main steps:
 * classification of raw tweets
 * construction of statistical indicators
 and for each step we provide the [scripts](./scripts) in python and R used to perform each of them. Please check each individual subfolder.
+
+## More about this Project
+
+This repository contain partial results from [The Geography of Human Flourishing Project](https://i-guide.io/spatial-ai-challenge-2024/accepted-abstracts/) analysis for the years 2010-2023 and all scripts and models used.
+
+This project is one of the 10 national projects awarded within the [Spatial AI-Challange 2024](https://i-guide.io/spatial-ai-challenge-2024/), an international initiative at the crossroads of geospatial science and artificial intelligence.
+
+## Related Publications
+
+* 
 
 
 

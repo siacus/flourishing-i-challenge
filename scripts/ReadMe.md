@@ -1,8 +1,8 @@
 # Scripts for Fine-Tuning, Classification and Statistical Analysis 
 These directory contain scripts for
-* [finetuning](./scripts//finetuning) of LLMs
-* [classification](./scripts/classification) of raw tweets
-* construction of statistical [indicators](./scripts/indicators)
+* [finetuning](./finetuning) of LLMs
+* [classification](./classification) of raw tweets
+* construction of statistical [indicators](./indicators)
 
 These scripts should work on Anvil, Delta-AI and FASRC clusters. But read below before trying to run them.
 

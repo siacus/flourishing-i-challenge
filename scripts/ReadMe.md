@@ -117,4 +117,7 @@ for the gpu:
 
 ```salloc -p gpu_test --gres=gpu:1 --mem=40G -N 1 -t 120```
 
-
+## Lesson Learned
+Although the three clusters use SLURM, OOD and same GPUs, you need to spend some time in figuring out the correct modules to load.
+SLURM on Anvil does not support ```--requeue``` which can be useful in our case.
+After iterating on three clusters, in the end the scripts are more robust than their original versions.

@@ -1,7 +1,10 @@
 # Scripts for Fine-Tuning, Classification and Statistical Analysis 
 These directory contain scripts for
+* [finetuning](./scripts//finetuning) of LLMs
+* [classification](./scripts/classification) of raw tweets
+* construction of statistical [indicators](./scripts/indicators)
 
-These scripts should work on Anvil, Delta-AI and FASRC clusters.
+These scripts should work on Anvil, Delta-AI and FASRC clusters. But read below before trying to run them.
 
 What follows is a simplified set of instructions for replicability and some notes that we find useful.
 Some tweaking are inevitable, like changing the account, allocation, SLURM partition names and folders.

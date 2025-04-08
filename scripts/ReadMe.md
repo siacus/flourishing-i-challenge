@@ -6,15 +6,22 @@ What follows is a simplified set of instructions for replicability and some note
 Some tweaking are inevitable, like changing the account, allocation, SLURM partition names and folders.
 
 These scripts assume you have an account on an ACCESS cluster or FARSC.
-## ACCESS accounts
+## ACCESS accounts: Anvil
 * create an ACCESS account [here](https://operations.access-ci.org/identity/new-user) 
 * login via SSH: follow the instructions [here](https://www.rcac.purdue.edu/knowledge/anvil/access/login). Essentially: First login to the web [Open OnDemand interface](https://ondemand.anvil.rcac.purdue.edu) using your ACCESS username and password, and then upload your public key by launching a shell from ODD console.
 * configuring VSCODE: I find this [link](https://github.com/KempnerInstitute/kempner-computing-handbook/blob/main/kempner_computing_handbook/development_and_runtime_envs/using_vscode_for_remote_development.md) useful
 * general instructions on how to run jobs on Anvil [here](https://www.rcac.purdue.edu/knowledge/anvil/run), and specifically [GPU jobs](https://www.rcac.purdue.edu/knowledge/anvil/run/examples/slurm)
-* to know which partitions are available ```showpartitions```
 * home directory ```/home/x-siacus``` (adjust)
 * project directory:  ```$PROJECT``` or ```/anvil/projects/x-soc250007``` (adjust)
 * scratch folder: ```/anvil/scratch/x-siacus/``` (adjust)
+
+## ACCESS accounts: Anvil
+* create an ACCESS account [here](https://operations.access-ci.org/identity/new-user) 
+* login via SSH: follow the instructions [here](https://www.rcac.purdue.edu/knowledge/anvil/access/login). Essentially: First login to the web [Open OnDemand interface](https://ondemand.anvil.rcac.purdue.edu) using your ACCESS username and password, and then upload your public key by launching a shell from ODD console.
+* configuring VSCODE: I find this [link](https://github.com/KempnerInstitute/kempner-computing-handbook/blob/main/kempner_computing_handbook/development_and_runtime_envs/using_vscode_for_remote_development.md) useful
+* general instructions on how to run jobs on Delta-AI [here](https://docs.ncsa.illinois.edu/systems/deltaai/en/latest/user-guide/running-jobs.html#partitions-queues), and specifically [GPU jobs](https://www.rcac.purdue.edu/knowledge/anvil/run/examples/slurm)
+* home directory ```/u/siacus``` (adjust)
+* project directory:  ```$PROJECT``` or ```/projects/befu/siacus/``` (adjust)
 
 ## FASRC accounts
 * login via SSH: follow the instructions [here](https://docs.rc.fas.harvard.edu/kb/ssh-to-a-compute-node/). Essentially: First login to the web [Open OnDemand interface](https://rcood.rc.fas.harvard.edu/pun/sys/dashboard/) using your FASRC username and password, and then upload your public key by launching a shell from ODD console.
@@ -44,6 +51,13 @@ module load gcc/12.2.0-fasrc01
 ```
 module purge
 module load anaconda
+```
+#### Cluster modules for Delta-AI
+```
+module purge
+module load nvhpc-openmpi3/24.3
+module load gcc/11.4.0
+module load nvhpc-hpcx-cuda12
 ```
 * Building the actual environment
 ```
@@ -78,6 +92,20 @@ generic:
 for the gpu:
 
 ```sinteractive -p gpu -N 1 -n 4 -A soc250007-gpu --gres=gpu:1 -t 2:0:0```
+
+#### On Delta-AI (adjust the allocation)
+generic: 
+
+```sinteractive -p shared  -N 1 -n 4 -A soc250007 -t 2:0:0```
+
+for the gpu:
+
+```
+salloc --mem=16g --nodes=1 --ntasks-per-node=1 --cpus-per-task=2 \
+  --partition=ghx4 \
+  --account=befu-dtai-gh --time=00:30:00 --gpus-per-node=1
+```
+
 
 #### On Fasrc
 generic: 

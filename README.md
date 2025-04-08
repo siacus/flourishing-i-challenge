@@ -56,7 +56,7 @@ The Harvard Center for Geographic Analysis (CGA) maintains the Geotweet Archive,
 
 ## Additional Datasets for Correlation Analysis
 
-### Resilience Indicators for USA
+### County Level Resilience Indicators for USA (Source: AlphaGeo)
 
 
 

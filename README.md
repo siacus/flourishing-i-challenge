@@ -13,6 +13,10 @@ The Geography of Human Flourishing research plan is to analyze Harvard’s colle
 
 Given the scalability challenge, this project analyzes in parallel also the so-called *migration mood* and the perception of *corruption*. Well-being, migration mood and corruption are topics that are tradionally studied in couples (migration mood vs happiness; migration and corruption; corruption and well-being). This research project will study the interplay of these three large areas of research.
 
+## Methodology
+
+
+
 ## The Twitter Dataset
 
 The Harvard Center for Geographic Analysis (CGA) maintains the Geotweet Archive, a global record of tweets spanning time, geography, and language. The Archive extends from 2010 to July 12, 2023 when Twitter stopped allowing free access to its API, transitioning API access to a paid model. The number of tweets in the collection totals approximately 10 billion multilingual global tweets (see map below), and it is stored on Harvard University’s High Performance Computing (HPC) cluster. For more information about the archive and how to acces it please click see our Dataverse page [Geotweets Archive v2.0](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/3NCMB6). 
@@ -45,6 +49,10 @@ This project is one of the 10 national projects awarded within the [Spatial AI-C
 * Gao, Y., Iacus, S. M., & Porro, G. (2023). Social media data for urban well-being indices. Journal of Data Science, 21(1), 69–89. https://doi.org/10.6339/23-JDS1297
 * Chai, Y., Kakkar, D., Palacios, J. et al. Twitter Sentiment Geographical Index Dataset. Sci Data 10, 684 (2023). https://doi.org/10.1038/s41597-023-02572-7
 
+## Acknowledgements
+
+We would like to thank the I-GUIDE team for the opportunity to participate in this challenge. Special thanks to the following members of the I-GUIDE team for their continuous support and guidance throughout the project: Diana Sackton, Shaowen Wang, Anand Padmanabhan, Rajesh Kalyanam, Noah S. Oller Smith, and Nattapon Jaroenchai.
+We also like to acknowledge the Harvard FASRC team, especially Paul Edmon, for providing the additional computing resources essential to this work. Finally, we would like to thank Parag Khanna from AlphaGeo for generously sharing the county-level resilience indicator data for the United States.
 
 
 

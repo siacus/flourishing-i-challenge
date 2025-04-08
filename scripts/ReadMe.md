@@ -1,4 +1,4 @@
-# Scripts for Classification and Statistical Indicators 
+# Scripts for Fine-Tuning, Classification and Statistical Analysis 
 
 These scripts should work on Anvil, Delta-AI and FASRC clusters.
 

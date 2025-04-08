@@ -25,12 +25,12 @@ This repository contain partial results from [The Geography of Human Flourishing
 
 This project is one of the 10 national projects awarded within the [Spatial AI-Challange 2024](https://i-guide.io/spatial-ai-challenge-2024/), an international initiative at the crossroads of geospatial science and artificial intelligence.
 
-## Deliverables of the project
+## Deliverables of The Project
 
 This is a simple notebook that shows (partial) results of the LLM analysis of the 2.2 billion subset of USA tweets extracted from the global Harvard's [Geotweets Archive v2.0](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/3NCMB6). Each raw tweets from the archive was further enriched with 8,180,866 [Census Blocks Geography](https://www.census.gov/cgi-bin/geo/shapefiles/index.php). The analysis was run at Census ID level and aggreagated at County and State level by year. Our computations for entire the US and full time period of 13 years are ongoing. However, You can explore partial results (year >= 2012) for some of the 46 flourishing dimensions. We suggest to explore ```Happiness`` for the moment. See sample results for Happiness Index in the image below. On the main [data repository](https://huggingface.co/datasets/siacus/flourishing) on Huggingface (that will be constantly updated as data are avaiable) you can also find monthly aggregation by  county and state as well.
 ![alt text](https://github.com/siacus/flourishing-i-challenge/blob/main/Happiness_Index.png)
 
-## How this repository is structured
+## How this Repository is Structured
 The project involves three main steps:
 * [finetuning](./finetuning) of LLMs
 * [classification](./classification) of raw tweets

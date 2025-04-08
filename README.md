@@ -15,7 +15,7 @@ Given the scalability challenge, this project analyzes in parallel also the so-c
 
 ## Methodology
 
-## How to build the setup you to run inference on fasrc
+## How to build the setup you to run inference on Anvil
 ```
 ### This will setup you to run inference on fasrc
 ### Do not use mamba, use conda/minicoda and give the exact same commands or gpu workflow won't work
@@ -53,6 +53,12 @@ CMAKE_ARGS="-DGGML_CUDA=on" pip install llama-cpp-python
 The Harvard Center for Geographic Analysis (CGA) maintains the Geotweet Archive, a global record of tweets spanning time, geography, and language. The Archive extends from 2010 to July 12, 2023 when Twitter stopped allowing free access to its API, transitioning API access to a paid model. The number of tweets in the collection totals approximately 10 billion multilingual global tweets (see map below), and it is stored on Harvard University’s High Performance Computing (HPC) cluster. For more information about the archive and how to acces it please click see our Dataverse page [Geotweets Archive v2.0](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/3NCMB6). 
 
 ![alt text](https://github.com/siacus/flourishing-i-challenge/blob/main/map_tweets_language.png)
+
+## Additional Datasets for Correlation Analysis
+
+### Resilience Indicators for USA
+
+
 
 
 ## Deliverables of The Project

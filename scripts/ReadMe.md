@@ -1,4 +1,5 @@
 # Scripts for Fine-Tuning, Classification and Statistical Analysis 
+These directory contain scripts for
 
 These scripts should work on Anvil, Delta-AI and FASRC clusters.
 

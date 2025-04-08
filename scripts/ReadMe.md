@@ -24,9 +24,11 @@ These scripts assume you have an account on an ACCESS cluster or FARSC.
 * scratch folder: ```/n/netscratch/siacus_lab``` (adjust)
 
 #### Useful SLURM commands
-* to know which partitions are available ```showpartitions```
-* to know jour jobs ```squeue | grep siacus```   # (adjust username)
-* to kill jour jobs ```scancel job_num```
+* to know which partitions are available: ```showpartitions```
+* to know jour jobs: ```squeue | grep siacus```   # (adjust username)
+* to kill one of jour jobs: ```scancel job_num```
+* to kill all your jobs: ```scancel -u $USER```
+
   
 ## Setting up a Conda Environment
 All scripts run in a conda environment DO NOT USE MAMBA !

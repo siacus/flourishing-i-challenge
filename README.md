@@ -15,6 +15,36 @@ Given the scalability challenge, this project analyzes in parallel also the so-c
 
 ## Methodology
 
+# This will setup you to run inference on fasrc
+# Do not use mamba, use conda/minicoda and give the exact same commands or gpu workflow won't work
+# how I build the conda environment that I use to fine-tune and inference
+module load anaconda
+conda create -n jago python=3.10
+conda activate jago
+pip3 install accelerate peft bitsandbytes transformers trl
+pip install huggingface-hub   # this is optional
+pip install psutil
+#####################################
+### HOW TO BUILD llama-cpp-python ###
+#####################################
+#
+# llama-ccp-python is used to run GGUF models in python
+# a simple "pip install llama-cpp-python" will not
+# install the GPU version
+# 1. spin the gpu instance
+salloc -p gpu_test --gres=gpu:1 --mem=40G -N 1 -t 2:00:00
+# 2. load the modules as in the above
+module load modtree/gpu   # default gcc and cuda version too old
+module load cuda/11  # the version of cuda and gcc shold match on this cluster
+module load gcc/11
+module load anaconda
+module list
+# 3. activate the env to have it installed properly
+conda activate jago
+# 4. build it. Takes forever
+CMAKE_ARGS="-DGGML_CUDA=on" pip install llama-cpp-python
+# wait a few hours
+'''
 
 
 ## The Twitter Dataset
@@ -51,8 +81,7 @@ This project is one of the 10 national projects awarded within the [Spatial AI-C
 
 ## Acknowledgements
 
-We would like to thank the I-GUIDE team for the opportunity to participate in this challenge. Special thanks to the following members of the I-GUIDE team for their continuous support and guidance throughout the project: Diana Sackton, Shaowen Wang, Anand Padmanabhan, Rajesh Kalyanam, Noah S. Oller Smith, and Nattapon Jaroenchai.
-We also like to acknowledge the Harvard FASRC team, especially Paul Edmon, for providing the additional computing resources essential to this work. Finally, we would like to thank Parag Khanna from AlphaGeo for generously sharing the county-level resilience indicator data for the United States.
+We would like to thank the I-GUIDE team for the opportunity to participate in this challenge. Special thanks to the following members of the I-GUIDE team for their continuous support and guidance throughout the project: Diana Sackton, Shaowen Wang, Anand Padmanabhan, Rajesh Kalyanam, Noah S. Oller Smith, and Nattapon Jaroenchai. We also like to acknowledge the Harvard FASRC team, especially Paul Edmon, for providing the additional computing resources essential to this work. Finally, we would like to thank Parag Khanna from AlphaGeo for generously sharing the county-level resilience indicator data for the United States.
 
 
 

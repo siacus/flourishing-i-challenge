@@ -4,6 +4,7 @@ Team of the [Spatial AI-Challenge 2024](https://i-guide.io/spatial-ai-challenge-
 Other co-authors related to this project: Giuseppe Porro, Marcello Carammia, Andrea Vezzulli.
 
 ## Project Summary
+
 [The Human Flourishing Program](https://hfh.fas.harvard.edu) is a research initiative whose goal is to study and promote human flourishing across a broad spectrum of life domains, integrating interdisciplinary research in social sciences, philosophy, psychology, and other fields. The [Global Flourishing Study](https://hfh.fas.harvard.edu/global-flourishing-study) (GFS), a five-year traditional longitudinal data collection on approximately 200,000 participants from 20+ geographically and culturally diverse countries and territories, measures global human flourishing in six areas: Happiness and life satisfaction; Mental and physical health; Meaning and purpose; Character and virtue; Close social relationships and Material and financial stability.
 
 ## Our Approach
@@ -25,6 +26,7 @@ This is a simple notebook that shows (partial) results of the LLM analysis of th
 ![alt text](https://github.com/siacus/flourishing-i-challenge/blob/main/Happiness_Index.png)
 
 ## How this Repository is Structured
+
 The project involves three main steps:
 * finetuning of LLMs
 * classification of raw tweets
@@ -39,7 +41,9 @@ This project is one of the 10 national projects awarded within the [Spatial AI-C
 
 ## Related Publications
 
-* 
+* Iacus, S. M., & Porro, G. (Eds.). (2023). Subjective well-being and social media. Routledge. https://www.routledge.com/Subjective-Well-Being-and-Social-Media/Iacus-Porro/p/book/9781032043166
+* Gao, Y., Iacus, S. M., & Porro, G. (2023). Social media data for urban well-being indices. Journal of Data Science, 21(1), 69–89. https://doi.org/10.6339/23-JDS1297
+* Chai, Y., Kakkar, D., Palacios, J. et al. Twitter Sentiment Geographical Index Dataset. Sci Data 10, 684 (2023). https://doi.org/10.1038/s41597-023-02572-7
 
 
 

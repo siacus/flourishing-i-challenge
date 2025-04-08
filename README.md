@@ -56,9 +56,11 @@ The Harvard Center for Geographic Analysis (CGA) maintains the Geotweet Archive,
 
 ## Additional Datasets for Correlation Analysis
 
-### County Level Resilience Indicators for USA (Source: AlphaGeo)
+### County Level Climate and Resilience Index for USA (Source: AlphaGeo)
 
+[AlphaGeo's Global Climate Risk and Resilience Index]([https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/3NCMB6](https://docs.alphageo.ai/products/climate-risk-and-resilience-index/the-alphageo-advantage-climate-risk-and-resilience-index) is a unique two-in-one scoring suite of (1) Physical Risk and (2) Resilience-adjusted Risk. Together, these deliver risk and resilience assessments at scale.
 
+![alt text]([https://github.com/siacus/flourishing-i-challenge/blob/main/map_tweets_language.png](https://github.com/siacus/flourishing-i-challenge/blob/main/topper-map-desktop-risk-xlarge.jpg)
 
 
 ## Deliverables of The Project

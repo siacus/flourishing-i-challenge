@@ -83,9 +83,11 @@ This project is one of the 10 national projects awarded within the [Spatial AI-C
 
 ## Related Publications
 
-* Iacus, S. M., & Porro, G. (Eds.). (2023). Subjective well-being and social media. Routledge. https://www.routledge.com/Subjective-Well-Being-and-Social-Media/Iacus-Porro/p/book/9781032043166
-* Gao, Y., Iacus, S. M., & Porro, G. (2023). Social media data for urban well-being indices. Journal of Data Science, 21(1), 69–89. https://doi.org/10.6339/23-JDS1297
-* Chai, Y., Kakkar, D., Palacios, J. et al. Twitter Sentiment Geographical Index Dataset. Sci Data 10, 684 (2023). https://doi.org/10.1038/s41597-023-02572-7
+* Carpi, T., Hino, A.,  Iacus, S.M., Porro, G. (2022) The Impact of COVID-19 on Subjective Well-Being: Evidence from Twitter Data, Journal of Data Science 21(4), 761-780, DOI:[10.6339/22-JDS1066](https://doi.org/10.6339/22-JDS1066).
+* Iacus, S. M., & Porro, G. (Eds.). (2023) Subjective well-being and social media. Routledge. ISBN: [9781032043166](https://www.routledge.com/Subjective-Well-Being-and-Social-Media/Iacus-Porro/p/book/9781032043166)
+* Chai, Y., Kakkar, D., Palacios, J. et al. (2023) Twitter Sentiment Geographical Index Dataset, Sci Data 10, 684, DOI:[10.1038/s41597-023-02572-7](https://doi.org/10.1038/s41597-023-02572-7).
+* Carammia, M., Iacus, S.M., Porro, G. (2024) Rethinking Scale: The Efficacy of Fine-Tuned Open-Source LLMs in Large-Scale Reproducible Social Science Research, ArXiv, DOI:[arXiv.2411.00890](https://doi.org/10.48550/arXiv.2411.00890).
+
 
 ## Acknowledgements
 

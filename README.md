@@ -15,7 +15,7 @@ Given the scalability challenge, this project analyzes in parallel also the so-c
 
 ## Methodology
 
-## How to build the setup you to run inference on Anvil
+## How to build the setup to run inference on Anvil
 ```
 ### This will setup you to run inference on fasrc
 ### Do not use mamba, use conda/minicoda and give the exact same commands or gpu workflow won't work

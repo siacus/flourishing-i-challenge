@@ -1,4 +1,4 @@
-# The Geography of Human Flourishing - Project Notebook
+# The Geography of Human Flourishing - Github Repository
 Team of the [Spatial AI-Challenge 2024](https://i-guide.io/spatial-ai-challenge-2024/): Stefano Iacus, Devika Jain, Andrea Nasuto.
 
 Other co-authors related to this project: Giuseppe Porro, Marcello Carammia, Andrea Vezzulli.
@@ -12,6 +12,8 @@ Other co-authors related to this project: Giuseppe Porro, Marcello Carammia, And
 The Geography of Human Flourishing research plan is to analyze Harvard’s collection of 10 billion geolocated tweets from 2010 to mid-2023 in view of the six areas identified by the GFS. The project applies [fine-tuned large language models (LLMs)](https://arxiv.org/abs/2411.00890) to extract 46 human flourishing dimensions across the six areas, generate high-resolution spatio-temporal indicators.  The project will apply large language models, to extract 46 human flourishing dimensions across the six areas of human flourishing, generate high-resolution spatio-temporal indicators and produce interactive tools to visualize and analyze the result. For the Spatial AI-Challenge 2024, the project analyzes a subset of 2.2 billion tweets geolocalized in the USA and generates  interactive visualization tools.
 
 Given the scalability challenge, this project analyzes in parallel also the so-called *migration mood* and the perception of *corruption*. Well-being, migration mood and corruption are topics that are tradionally studied in couples (migration mood vs happiness; migration and corruption; corruption and well-being). This research project will study the interplay of these three large areas of research.
+
+[Here](https://platform.i-guide.io/notebooks/e870ad3a-8c19-43e1-8323-fb8c39d12898) is the notebook submitted to the i-Guide platform that contains a copy of the [source notebook](flourishing.ipynb) stored in this github repository.
 
 ## Methodology
 

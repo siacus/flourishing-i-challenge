@@ -1,4 +1,4 @@
-# The Geography of Human Flourishing - Project Notebook
+# The Geography of Human Flourishing - Github Repository
 Team of the [Spatial AI-Challenge 2024](https://i-guide.io/spatial-ai-challenge-2024/): Stefano Iacus, Devika Jain, Andrea Nasuto.
 
 Other co-authors related to this project: Giuseppe Porro, Marcello Carammia, Andrea Vezzulli.

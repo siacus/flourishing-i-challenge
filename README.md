@@ -21,7 +21,7 @@ The [Global Flourishing Study](https://hfh.fas.harvard.edu/global-flourishing-st
 The Geography of Human Flourishing research project aims to analyze Harvard’s archive of 10 billion geolocated tweets (spanning from 2010 to mid-2023) through the lens of the six dimensions of human flourishing defined by the Global Flourishing Study (GFS).
 
 Using [fine-tuned large language models (LLMs)](https://arxiv.org/abs/2411.00890), the project extracts 46 indicators aligned with these six domains, generating high-resolution spatio-temporal datasets.  The initiative also develops interactive tools to visualize and analyze these patterns across space and time.
-The selected 46 dimensions of the global human flourishing framework are the following:
+The selected 46 dimensions of the global human flourishing framework and the way to extract them from tweets are listed below:
 
 1. **Happiness** – the text expresses some level of happiness  
 2. **Resilience** – a text expressing capability of withstanding or recovering from difficulties  

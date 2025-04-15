@@ -16,9 +16,13 @@ Other co-authors related to this project: Giuseppe Porro, Marcello Carammia, And
 
 ## Our Approach
 
-The Geography of Human Flourishing research plan is to analyze Harvard’s collection of 10 billion geolocated tweets from 2010 to mid-2023 in view of the six areas identified by the GFS. The project applies [fine-tuned large language models (LLMs)](https://arxiv.org/abs/2411.00890) to extract 46 human flourishing dimensions across the six areas, generate high-resolution spatio-temporal indicators.  The project will apply large language models, to extract 46 human flourishing dimensions across the six areas of human flourishing, generate high-resolution spatio-temporal indicators and produce interactive tools to visualize and analyze the result. For the Spatial AI-Challenge 2024, the project analyzes a subset of 2.2 billion tweets geolocalized in the USA and generates  interactive visualization tools.
+The Geography of Human Flourishing research project aims to analyze Harvard’s archive of 10 billion geolocated tweets (spanning from 2010 to mid-2023) through the lens of the six dimensions of human flourishing defined by the Global Flourishing Study (GFS).
 
-Given the scalability challenge, this project analyzes in parallel also the so-called *migration mood* and the perception of *corruption*. Well-being, migration mood and corruption are topics that are tradionally studied in couples (migration mood vs happiness; migration and corruption; corruption and well-being). This research project will study the interplay of these three large areas of research.
+Using [fine-tuned large language models (LLMs)](https://arxiv.org/abs/2411.00890) , the project extracts 46 indicators aligned with these six domains, generating high-resolution spatio-temporal datasets.  The initiative also develops interactive tools to visualize and analyze these patterns across space and time.
+
+For the Spatial AI Challenge 2024, the project focuses on a U.S.-based subset of 2.2 billion geolocated tweets, building interactive dashboards and scalable workflows. To further push the boundaries of spatial AI, the project explores two additional themes—migration mood and perceived corruption—in parallel with well-being.
+
+These three domains—well-being, migration mood, and corruption—are often studied in pairs (e.g., migration mood vs. happiness, migration and corruption, or corruption and well-being). This project advances the field by examining the dynamic interplay among all three, offering new insights into their complex interrelationships across both space and time.
 
 [Here](https://platform.i-guide.io/notebooks/e870ad3a-8c19-43e1-8323-fb8c39d12898) is the notebook submitted to the i-Guide platform that contains a copy of the [source notebook](flourishing.ipynb) stored in this github repository.
 

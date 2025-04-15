@@ -27,7 +27,7 @@ For each dimension, the calculation is done by aggregating and summing by region
 
 Therefore, all values vary in (-1,+1) with the exception of ```corruption``` which is alwayws a number in [0,1].
 
-The [FlourishingMap Explorer](https://github.com/siacus/flourishingmap) further apply two transforms to improve contrast as most numbers are close to zero. The transformations are: ```new_indicator = log(2+mean(Indicator))``` and ```new_indicator = log(1+mean(corruption))``` and then the statistics are normalized to [-1,+1]. 
+The [FlourishingMap Explorer](https://github.com/siacus/flourishingmap) further apply two transforms to improve contrast as most numbers are close to zero. The transformations are: ```log_indicator = log(2+indicator)``` and ```log_corruption = log(1+corruption)``` and then the statistics are normalized again to [-1,+1] (after centering for ```log(2)``` for all indicators but "corruption").
 
 
 ## How to build the setup to run inference on Anvil

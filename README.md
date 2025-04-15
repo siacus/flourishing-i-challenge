@@ -28,6 +28,14 @@ These three domains—well-being, migration mood, and corruption—are often stu
 
 You can play with a dashboard based on this data [here](https://askdataverse.shinyapps.io/FlourishingMap/) and the corresponding github repository is [here](https://github.com/siacus/flourishingmap).
 
+## The Twitter Dataset
+
+The Harvard Center for Geographic Analysis (CGA) maintains the GeoTweet Archive, a global dataset of tweets spanning across time, geography, and language. This archive covers the period from 2010 to July 12, 2023, when Twitter transitioned its API access from free to a paid model. The archive contains approximately 10 billion multilingual tweets from around the world (see map below) and is hosted on Harvard University’s High Performance Computing (HPC) cluster.
+
+For more details about the archive and how to access it, please visit __[Geotweets Archive v2.0](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/3NCMB6)__.
+
+![alt text](https://github.com/siacus/flourishing-i-challenge/blob/main/map_tweets_language.png)
+
 ## Methodology
 
 There are three models running in parallel that classify the same tweet and produce numbers;
@@ -40,22 +48,6 @@ For each dimension, the calculation is done by aggregating and summing by region
 Therefore, all values vary in (-1,+1) with the exception of ```corruption``` which is alwayws a number in [0,1].
 
 The [FlourishingMap Explorer](https://github.com/siacus/flourishingmap) further apply two transforms to improve contrast as most numbers are close to zero. The transformations are: ```log_indicator = log(2+indicator)``` and ```log_corruption = log(1+corruption)``` and then the statistics are normalized again to [-1,+1] (after centering for ```log(2)``` for all indicators but "corruption").
-
-
-## The Twitter Dataset
-
-The Harvard Center for Geographic Analysis (CGA) maintains the GeoTweet Archive, a global dataset of tweets spanning across time, geography, and language. This archive covers the period from 2010 to July 12, 2023, when Twitter transitioned its API access from free to a paid model. The archive contains approximately 10 billion multilingual tweets from around the world (see map below) and is hosted on Harvard University’s High Performance Computing (HPC) cluster.
-
-For more details about the archive and how to access it, please visit __[Geotweets Archive v2.0](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/3NCMB6)__.
-
-![alt text](https://github.com/siacus/flourishing-i-challenge/blob/main/map_tweets_language.png)
-
-## Additional Datasets for Correlation Analysis
-
-### County Level Climate and Resilience Index for USA (Source: AlphaGeo)
-
-[AlphaGeo's Global Climate Risk and Resilience Index](https://docs.alphageo.ai/products/climate-risk-and-resilience-index/the-alphageo-advantage-climate-risk-and-resilience-index) is a unique two-in-one scoring suite of (1) Physical Risk and (2) Resilience-adjusted Risk. Together, these deliver risk and resilience assessments at scale. Explore the dataset [here](https://www.washingtonpost.com/climate-environment/interactive/2024/climate-risk-resilience-factors-us-cities/)
-![alt text](https://github.com/siacus/flourishing-i-challenge/blob/main/climate_risk.png)
 
 
 ## Deliverables of The Project
@@ -87,8 +79,7 @@ This project is one of the 10 national projects awarded within the [Spatial AI-C
 
 ## Acknowledgements
 
-We would like to thank the I-GUIDE team for the opportunity to participate in this challenge. Special thanks to the following members of the I-GUIDE team for their continuous support and guidance throughout the project: Diana Sackton, Shaowen Wang, Anand Padmanabhan, Rajesh Kalyanam, Noah S. Oller Smith, and Nattapon Jaroenchai. We also like to acknowledge the Harvard FASRC team, especially Paul Edmon, for providing the additional computing resources essential to this work. Finally, we would like to thank Parag Khanna from AlphaGeo for generously sharing the county-level climate and resilience index data for the United States.
-
+We extend our sincere thanks to the I-GUIDE team for the opportunity to participate in this challenge. We are especially grateful to Diana Sackton, Shaowen Wang, Anand Padmanabhan, Rajesh Kalyanam, Noah S. Oller Smith, and Nattapon Jaroenchai for their ongoing support and guidance throughout the project. We also acknowledge the Harvard FASRC team, with special thanks to Paul Edmon, for providing the additional computing resources that were essential to this work. We would like to thank Xiaokang Fu from the Harvard Center for Geographic Analysis (CGA) for his assistance in enriching U.S. tweets with Census geography. Finally, we would like to thank Parag Khanna from AlphaGeo for generously sharing the county-level climate and resilience index data for the United States.
 
 
 

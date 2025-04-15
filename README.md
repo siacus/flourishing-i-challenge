@@ -6,7 +6,8 @@ Other co-authors related to this project: Giuseppe Porro, Marcello Carammia, And
 
 ## Project Summary
 
-[The Human Flourishing Program](https://hfh.fas.harvard.edu) is a research initiative dedicated to studying and promoting human flourishing across diverse domains of life. It integrates interdisciplinary research from the social sciences, philosophy, psychology, and related fields to advance understanding and practical applications. The [Global Flourishing Study](https://hfh.fas.harvard.edu/global-flourishing-study) (GFS), is a five-year longitudinal study involving approximately 200,000 participants from over 20 geographically and culturally diverse countries and territories. It measures global human flourishing across six key dimensions:
+[The Human Flourishing Program](https://hfh.fas.harvard.edu) is a research initiative dedicated to studying and promoting human flourishing across diverse domains of life. It integrates interdisciplinary research from the social sciences, philosophy, psychology, and related fields to advance understanding and practical applications. 
+The [Global Flourishing Study](https://hfh.fas.harvard.edu/global-flourishing-study), is a five-year longitudinal study involving approximately 200,000 participants from over 20 geographically and culturally diverse countries and territories. It measures global human flourishing across six key dimensions:
 
 - Happiness and life satisfaction
 - Mental and physical health

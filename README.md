@@ -31,6 +31,8 @@ These three domains—well-being, migration mood, and corruption—are often stu
 
 You can play with a dashboard based on this data [here](https://askdataverse.shinyapps.io/FlourishingMap/) and the corresponding github repository is [here](https://github.com/siacus/flourishingmap).
 
+
+
 ## Repository Contents
 
 1. ```scripts```: This directory contain [scripts](./scripts) for
@@ -58,11 +60,13 @@ These scripts should work on Anvil, Delta-AI and FASRC clusters. But read below 
 * Appendix
 
 
-
-
 ## License
 
 This project is licensed under the MIT License.
+
+## Acknowledgements
+
+We extend our sincere thanks to the I-GUIDE team for the opportunity to participate in this challenge. We are especially grateful to Diana Sackton, Shaowen Wang, Anand Padmanabhan, Rajesh Kalyanam, Noah S. Oller Smith, and Nattapon Jaroenchai for their ongoing support and guidance throughout the project. We also acknowledge the Harvard FASRC team, with special thanks to Paul Edmon, for providing the additional computing resources that were essential to this work. We would like to thank Xiaokang Fu from the Harvard Center for Geographic Analysis (CGA) for his assistance in enriching U.S. tweets with Census geography. Finally, we would like to thank Parag Khanna from AlphaGeo for generously sharing the county-level climate and resilience index data for the United States.
 
 
 

@@ -81,7 +81,7 @@ You can play with a dashboard based on this data [here](https://askdataverse.shi
 
 ## Repository Contents
 
-1. ```Scipts```: These directory contain scripts for
+1. ```scripts```: This directory contain [scripts](./scripts) for
 
 * finetuning of LLMs
 * classification of raw tweets

@@ -48,20 +48,7 @@ These scripts should work on Anvil, Delta-AI and FASRC clusters. But read below 
 
 2. Instructions to run the notebook
 * [requirements.txt](./requirements.txt): List of Python dependencies required to run the notebook.
-*  [flourishing.ipynb](./flourishing.ipynb): Jupyter Notebook detailing the following information about the project:
-
-
-* Introduction
-* Dataset Description
-* Methodology
-* Results
-* Interpretation
-* Next Steps
-* Lessons Learned
-* Publications
-* Acknowledgements
-* Appendix
-
+*  [flourishing.ipynb](./flourishing.ipynb): Jupyter Notebook detailing the following information about the project: _Introduction, Dataset Description, Methodology, Results, Interpretation, Next Steps, Lessons Learned, Publications, Acknowledgements and Appendix_.
 ## Publications
 
 1. Carpi, T., Hino, A., Iacus, S.M., Porro, G. (2022) The Impact of COVID-19 on Subjective Well-Being: Evidence from Twitter Data, Journal of Data Science 21(4), 761-780, __[DOI](https://jds-online.org/journal/JDS/article/1297/info)__.

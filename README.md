@@ -62,6 +62,12 @@ These scripts should work on Anvil, Delta-AI and FASRC clusters. But read below 
 * Acknowledgements
 * Appendix
 
+## Publications
+
+1. Carpi, T., Hino, A., Iacus, S.M., Porro, G. (2022) The Impact of COVID-19 on Subjective Well-Being: Evidence from Twitter Data, Journal of Data Science 21(4), 761-780, __[DOI](https://jds-online.org/journal/JDS/article/1297/info)__.
+2. Iacus, S. M., & Porro, G. (Eds.). (2023) Subjective well-being and social media. Routledge. ISBN: 9781032043166 __[LINK](https://www.routledge.com/Subjective-Well-Being-and-Social-Media/Iacus-Porro/p/book/9781032043166?srsltid=AfmBOopDDrHgFJs8bT0jeAnPVwZZfGRq9aUFL6z2fZmQxmMZEqIp9LU_)__.
+3. Chai, Y., Kakkar, D., Palacios, J. et al. (2023) Twitter Sentiment Geographical Index Dataset, Sci Data 10, 684, __[DOI](https://www.nature.com/articles/s41597-023-02572-7)__.
+4. Carammia, M., Iacus, S.M., Porro, G. (2024) Rethinking Scale: The Efficacy of Fine-Tuned Open-Source LLMs in Large-Scale Reproducible Social Science Research, ArXiv, __[DOI](https://arxiv.org/abs/2411.00890)__.
 
 ## License
 

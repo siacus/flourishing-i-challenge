@@ -1,4 +1,5 @@
 # The Geography of Human Flourishing - Github Repository
+
 Team of the [Spatial AI-Challenge 2024](https://i-guide.io/spatial-ai-challenge-2024/): Stefano Iacus, Devika Jain, Andrea Nasuto.
 
 Other co-authors related to this project: Giuseppe Porro, Marcello Carammia, Andrea Vezzulli.
@@ -14,7 +15,7 @@ Other co-authors related to this project: Giuseppe Porro, Marcello Carammia, And
 - Close social relationships
 - Material and financial stability
 
-## Our Approach
+### Our Approach
 
 The Geography of Human Flourishing research project aims to analyze Harvard’s archive of 10 billion geolocated tweets (spanning from 2010 to mid-2023) through the lens of the six dimensions of human flourishing defined by the Global Flourishing Study (GFS).
 
@@ -28,58 +29,21 @@ These three domains—well-being, migration mood, and corruption—are often stu
 
 You can play with a dashboard based on this data [here](https://askdataverse.shinyapps.io/FlourishingMap/) and the corresponding github repository is [here](https://github.com/siacus/flourishingmap).
 
-## The Twitter Dataset
+## Repository Contents
+- [Scipts](https://github.com/siacus/flourishing-i-challenge/tree/main/scripts): These directory contain scripts for
 
-The Harvard Center for Geographic Analysis (CGA) maintains the GeoTweet Archive, a global dataset of tweets spanning across time, geography, and language. This archive covers the period from 2010 to July 12, 2023, when Twitter transitioned its API access from free to a paid model. The archive contains approximately 10 billion multilingual tweets from around the world (see map below) and is hosted on Harvard University’s High Performance Computing (HPC) cluster.
-
-For more details about the archive and how to access it, please visit __[Geotweets Archive v2.0](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/3NCMB6)__.
-
-![alt text](https://github.com/siacus/flourishing-i-challenge/blob/main/map_tweets_language.png)
-
-## Methodology
-
-There are three models running in parallel that classify the same tweet and produce numbers;
-* human flourishing: e.g., happiness: low (-1), medium (0.5) and high (1), NA indicates that none of the 46 dimensions of human flourishing hase been found;
-* migration mood: pro-migration (+1), anti-migration (-1), neutral (0), not about migration (NA);
-* perception of corruption: about corruption (1) or not (0).
-
-For each dimension, the calculation is done by aggregating and summing by regional area (census area, county, state), and period (month, year). The calculation is essentially summing up the values and normalizing by the total number of relevant/in topic tweets.
-
-Therefore, all values vary in (-1,+1) with the exception of ```corruption``` which is alwayws a number in [0,1].
-
-The [FlourishingMap Explorer](https://github.com/siacus/flourishingmap) further apply two transforms to improve contrast as most numbers are close to zero. The transformations are: ```log_indicator = log(2+indicator)``` and ```log_corruption = log(1+corruption)``` and then the statistics are normalized again to [-1,+1] (after centering for ```log(2)``` for all indicators but "corruption").
-
-
-## Deliverables of The Project
-
-This is a simple notebook that shows (partial) results of the LLM analysis of the 2.2 billion subset of USA tweets extracted from the global Harvard's [Geotweets Archive v2.0](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/3NCMB6). Each raw tweets from the archive was further enriched with 8,180,866 [Census Blocks Geography](https://www.census.gov/cgi-bin/geo/shapefiles/index.php). The analysis was run at Census ID level and aggreagated at County and State level by year. Our computations for entire the US and full time period of 13 years are ongoing. However, You can explore partial results (year >= 2012) for some of the 46 flourishing dimensions. We suggest to explore ```Happiness`` for the moment. See sample results for Happiness Index in the image below. On the main [data repository](https://huggingface.co/datasets/siacus/flourishing) on Huggingface (that will be constantly updated as data are avaiable) you can also find monthly aggregation by  county and state as well.
-![alt text](https://github.com/siacus/flourishing-i-challenge/blob/main/Happiness_Index.png)
-
-## How this Repository is Structured
-
-The project involves three main steps:
 * finetuning of LLMs
 * classification of raw tweets
 * construction of statistical indicators
-and for each step we provide the [scripts](./scripts) in python and R used to perform each of them. Please check each individual subfolder.
 
-## More about this Project
-
-This repository contain partial results from [The Geography of Human Flourishing Project](https://i-guide.io/spatial-ai-challenge-2024/accepted-abstracts/) analysis for the years 2010-2023 and all scripts and models used.
-
-This project is one of the 10 national projects awarded within the [Spatial AI-Challange 2024](https://i-guide.io/spatial-ai-challenge-2024/), an international initiative at the crossroads of geospatial science and artificial intelligence.
-
-## Related Publications
-
-* Carpi, T., Hino, A.,  Iacus, S.M., Porro, G. (2022) The Impact of COVID-19 on Subjective Well-Being: Evidence from Twitter Data, Journal of Data Science 21(4), 761-780, DOI:[10.6339/22-JDS1066](https://doi.org/10.6339/22-JDS1066).
-* Iacus, S. M., & Porro, G. (Eds.). (2023) Subjective well-being and social media. Routledge. ISBN: [9781032043166](https://www.routledge.com/Subjective-Well-Being-and-Social-Media/Iacus-Porro/p/book/9781032043166)
-* Chai, Y., Kakkar, D., Palacios, J. et al. (2023) Twitter Sentiment Geographical Index Dataset, Sci Data 10, 684, DOI:[10.1038/s41597-023-02572-7](https://doi.org/10.1038/s41597-023-02572-7).
-* Carammia, M., Iacus, S.M., Porro, G. (2024) Rethinking Scale: The Efficacy of Fine-Tuned Open-Source LLMs in Large-Scale Reproducible Social Science Research, ArXiv, DOI:[arXiv.2411.00890](https://doi.org/10.48550/arXiv.2411.00890).
+These scripts should work on Anvil, Delta-AI and FASRC clusters. But read below before trying to run them. [Our notebook](https://platform.i-guide.io/notebooks/e870ad3a-8c19-43e1-8323-fb8c39d12898)(see Appendix) contains simplified set of instructions for replicability and some notes that we find useful. Some tweaking are inevitable, like changing the account, allocation, SLURM partition names and folders. These scripts assume you have an account on an ACCESS Anvil or Harvard FARSC.
 
 
-## Acknowledgements
 
-We extend our sincere thanks to the I-GUIDE team for the opportunity to participate in this challenge. We are especially grateful to Diana Sackton, Shaowen Wang, Anand Padmanabhan, Rajesh Kalyanam, Noah S. Oller Smith, and Nattapon Jaroenchai for their ongoing support and guidance throughout the project. We also acknowledge the Harvard FASRC team, with special thanks to Paul Edmon, for providing the additional computing resources that were essential to this work. We would like to thank Xiaokang Fu from the Harvard Center for Geographic Analysis (CGA) for his assistance in enriching U.S. tweets with Census geography. Finally, we would like to thank Parag Khanna from AlphaGeo for generously sharing the county-level climate and resilience index data for the United States.
+
+## License
+
+This project is licensed under the MIT License.
 
 
 

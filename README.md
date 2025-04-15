@@ -16,7 +16,19 @@ Given the scalability challenge, this project analyzes in parallel also the so-c
 [Here](https://platform.i-guide.io/notebooks/e870ad3a-8c19-43e1-8323-fb8c39d12898) is the notebook submitted to the i-Guide platform that contains a copy of the [source notebook](flourishing.ipynb) stored in this github repository.
 
 You can play with a dashboard based on this data [here](https://askdataverse.shinyapps.io/FlourishingMap/) and the corresponding github repositor is [here](https://github.com/siacus/flourishingmap).
+
 ## Methodology
+There are three models running in parallel that classify the same tweet and produce numbers;
+* human flourishing: e.g., happiness: low (-1), medium (0.5) and high (1), NA indicates that none of the 46 dimensions of human flourishing hase been found;
+* migration mood: pro-migration (+1), anti-migration (-1), neutral (0), not about migration (NA);
+* perception of corruption: about corruption (1) or not (0).
+
+For each dimension, the calculation is done by aggregating and summing by regional area (census area, county, state), and period (month, year). The calculation is essentially summing up the values and normalizing by the total number of relevant/in topic tweets.
+
+Therefore, all values vary in (-1,+1) with the exception of ```corruption''' which is alwayws a number in [0,1].
+
+The [FlourishingMap Explorer](https://github.com/siacus/flourishingmap) further apply two transforms to improve contrast as most numbers are close to zero. The transformations are: ```new_indicator = log(2+mean(Indicator))``` and ```new_indicator = log(1+mean(corruption))``` and then the statistics are normalized to [-1,+1]. 
+
 
 ## How to build the setup to run inference on Anvil
 ```

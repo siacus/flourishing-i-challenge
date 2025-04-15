@@ -15,6 +15,7 @@ Given the scalability challenge, this project analyzes in parallel also the so-c
 
 [Here](https://platform.i-guide.io/notebooks/e870ad3a-8c19-43e1-8323-fb8c39d12898) is the notebook submitted to the i-Guide platform that contains a copy of the [source notebook](flourishing.ipynb) stored in this github repository.
 
+You can play with a dashboard based on this data [here](https://askdataverse.shinyapps.io/FlourishingMap/) and the corresponding github repositor is [here](https://github.com/siacus/flourishingmap).
 ## Methodology
 
 ## How to build the setup to run inference on Anvil

@@ -89,8 +89,8 @@ You can play with a dashboard based on this data [here](https://askdataverse.shi
 
 These scripts should work on Anvil, Delta-AI and FASRC clusters. But read below before trying to run them. The [ReadMe](https://github.com/siacus/flourishing-i-challenge/blob/main/scripts/ReadMe.md) of the scripts folder contains simplified set of instructions for replicability and some notes that we find useful. Some tweaking are inevitable, like changing the account, allocation, SLURM partition names and folders. These scripts assume you have an account on an ACCESS Anvil or Harvard FARSC.
 
-2. ```requirements.txt```: List of Python dependencies required to run the notebook.
-3. ```flourishing.ipynb```: Jupyter Notebook detailing the following information about the project:
+2. [requirements.txt](./requirements.txt): List of Python dependencies required to run the notebook.
+3. [flourishing.ipynb](./flourishing.ipynb): Jupyter Notebook detailing the following information about the project:
 
 * Introduction
 * Dataset Description

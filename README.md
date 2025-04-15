@@ -31,7 +31,7 @@ You can play with a dashboard based on this data [here](https://askdataverse.shi
 
 ## Repository Contents
 
-1. ```[Scipts](https://github.com/siacus/flourishing-i-challenge/tree/main/scripts)```: These directory contain scripts for
+1. ```Scipts```: These directory contain scripts for
 
 * finetuning of LLMs
 * classification of raw tweets
@@ -39,7 +39,7 @@ You can play with a dashboard based on this data [here](https://askdataverse.shi
 
 These scripts should work on Anvil, Delta-AI and FASRC clusters. But read below before trying to run them. The [ReadMe](https://github.com/siacus/flourishing-i-challenge/blob/main/scripts/ReadMe.md) of the scripts folder contains simplified set of instructions for replicability and some notes that we find useful. Some tweaking are inevitable, like changing the account, allocation, SLURM partition names and folders. These scripts assume you have an account on an ACCESS Anvil or Harvard FARSC.
 
-2. ```[requirements.txt](https://github.com/siacus/flourishing-i-challenge/blob/main/requirements.txt)```: List of Python dependencies required to run the notebook.
+2. ```requirements.txt```: List of Python dependencies required to run the notebook.
 
 
 

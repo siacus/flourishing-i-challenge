@@ -25,7 +25,7 @@ There are three models running in parallel that classify the same tweet and prod
 
 For each dimension, the calculation is done by aggregating and summing by regional area (census area, county, state), and period (month, year). The calculation is essentially summing up the values and normalizing by the total number of relevant/in topic tweets.
 
-Therefore, all values vary in (-1,+1) with the exception of ```corruption''' which is alwayws a number in [0,1].
+Therefore, all values vary in (-1,+1) with the exception of ```corruption``` which is alwayws a number in [0,1].
 
 The [FlourishingMap Explorer](https://github.com/siacus/flourishingmap) further apply two transforms to improve contrast as most numbers are close to zero. The transformations are: ```new_indicator = log(2+mean(Indicator))``` and ```new_indicator = log(1+mean(corruption))``` and then the statistics are normalized to [-1,+1]. 
 

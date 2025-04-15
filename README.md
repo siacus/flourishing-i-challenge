@@ -31,6 +31,14 @@ These three domains—well-being, migration mood, and corruption—are often stu
 
 You can play with a dashboard based on this data [here](https://askdataverse.shinyapps.io/FlourishingMap/) and the corresponding github repository is [here](https://github.com/siacus/flourishingmap).
 
+## Geotweets Archive v2.0
+
+The Harvard Center for Geographic Analysis (CGA) maintains the GeoTweet Archive, a global dataset of tweets spanning across time, geography, and language. This archive covers the period from 2010 to July 12, 2023, when Twitter transitioned its API access from free to a paid model.
+
+The archive contains approximately 10 billion multilingual tweets from around the world (see map below) and is hosted on Harvard University’s High Performance Computing (HPC) cluster.
+
+For more details about the archive and how to access it, please visit __[Geotweets Archive v2.0](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/3NCMB6)__.
+
 
 
 ## Repository Contents

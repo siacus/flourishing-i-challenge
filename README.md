@@ -22,7 +22,6 @@ The Geography of Human Flourishing research project aims to analyze Harvard’s 
 
 Using [fine-tuned large language models (LLMs)](https://arxiv.org/abs/2411.00890), the project extracts 46 indicators aligned with these six domains, generating high-resolution spatio-temporal datasets.  The initiative also develops interactive tools to visualize and analyze these patterns across space and time.
 
-
 For the Spatial AI Challenge 2024, the project focuses on a U.S.-based subset of 2.2 billion geolocated tweets, building interactive dashboards and scalable workflows. To further push the boundaries of spatial AI, the project explores two additional themes—migration mood and perceived corruption—in parallel with well-being.
 
 These three domains—well-being, migration mood, and corruption—are often studied in pairs (e.g., migration mood vs. happiness, migration and corruption, or corruption and well-being). This project advances the field by examining the dynamic interplay among all three, offering new insights into their complex interrelationships across both space and time.
@@ -33,13 +32,9 @@ You can play with a dashboard based on this data [here](https://askdataverse.shi
 
 ## Our Dataset
 
-The Harvard Center for Geographic Analysis (CGA) maintains the **GeoTweet Archive v2.0**, a global dataset of tweets spanning across time, geography, and language. This archive covers the period from 2010 to July 12, 2023, when Twitter transitioned its API access from free to a paid model.
+The Harvard Center for Geographic Analysis (CGA) maintains the **GeoTweet Archive v2.0**, a global dataset of tweets spanning across time, geography, and language. This archive covers the period from 2010 to July 12, 2023, when Twitter transitioned its API access from free to a paid model. The archive contains approximately 10 billion multilingual tweets from around the world (see map below) and is hosted on Harvard University’s High Performance Computing (HPC) cluster. For more details about the archive and how to access it, please visit __[Geotweets Archive v2.0](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/3NCMB6)__.
 
-The archive contains approximately 10 billion multilingual tweets from around the world (see map below) and is hosted on Harvard University’s High Performance Computing (HPC) cluster.
-
-For more details about the archive and how to access it, please visit __[Geotweets Archive v2.0](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/3NCMB6)__.
-
-
+![Geotweets.png](attachment:436564cb-50cb-4798-b8b9-474169a63fe5.png)
 
 ## Repository Contents
 

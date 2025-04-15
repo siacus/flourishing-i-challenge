@@ -26,9 +26,10 @@ These three domains—well-being, migration mood, and corruption—are often stu
 
 [Here](https://platform.i-guide.io/notebooks/e870ad3a-8c19-43e1-8323-fb8c39d12898) is the notebook submitted to the i-Guide platform that contains a copy of the [source notebook](flourishing.ipynb) stored in this github repository.
 
-You can play with a dashboard based on this data [here](https://askdataverse.shinyapps.io/FlourishingMap/) and the corresponding github repositor is [here](https://github.com/siacus/flourishingmap).
+You can play with a dashboard based on this data [here](https://askdataverse.shinyapps.io/FlourishingMap/) and the corresponding github repository is [here](https://github.com/siacus/flourishingmap).
 
 ## Methodology
+
 There are three models running in parallel that classify the same tweet and produce numbers;
 * human flourishing: e.g., happiness: low (-1), medium (0.5) and high (1), NA indicates that none of the 46 dimensions of human flourishing hase been found;
 * migration mood: pro-migration (+1), anti-migration (-1), neutral (0), not about migration (NA);
@@ -41,42 +42,11 @@ Therefore, all values vary in (-1,+1) with the exception of ```corruption``` whi
 The [FlourishingMap Explorer](https://github.com/siacus/flourishingmap) further apply two transforms to improve contrast as most numbers are close to zero. The transformations are: ```log_indicator = log(2+indicator)``` and ```log_corruption = log(1+corruption)``` and then the statistics are normalized again to [-1,+1] (after centering for ```log(2)``` for all indicators but "corruption").
 
 
-## How to build the setup to run inference on Anvil
-```
-### This will setup you to run inference on fasrc
-### Do not use mamba, use conda/minicoda and give the exact same commands or gpu workflow won't work
-### how I build the conda environment that I use to fine-tune and inference
-module load anaconda
-conda create -n jago python=3.10
-conda activate jago
-pip3 install accelerate peft bitsandbytes transformers trl
-pip install huggingface-hub   # this is optional
-pip install psutil
-#####################################
-### HOW TO BUILD llama-cpp-python ###
-#####################################
-#
-### llama-ccp-python is used to run GGUF models in python
-### a simple "pip install llama-cpp-python" will not
-### install the GPU version
-### 1. spin the gpu instance
-salloc -p gpu_test --gres=gpu:1 --mem=40G -N 1 -t 2:00:00
-### 2. load the modules as in the above
-module load modtree/gpu   # default gcc and cuda version too old
-module load cuda/11  # the version of cuda and gcc shold match on this cluster
-module load gcc/11
-module load anaconda
-module list
-### 3. activate the env to have it installed properly
-conda activate jago
-### 4. build it. Takes forever
-CMAKE_ARGS="-DGGML_CUDA=on" pip install llama-cpp-python
-### wait a few hours
-```
-
 ## The Twitter Dataset
 
-The Harvard Center for Geographic Analysis (CGA) maintains the Geotweet Archive, a global record of tweets spanning time, geography, and language. The Archive extends from 2010 to July 12, 2023 when Twitter stopped allowing free access to its API, transitioning API access to a paid model. The number of tweets in the collection totals approximately 10 billion multilingual global tweets (see map below), and it is stored on Harvard University’s High Performance Computing (HPC) cluster. For more information about the archive and how to acces it please click see our Dataverse page [Geotweets Archive v2.0](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/3NCMB6). 
+The Harvard Center for Geographic Analysis (CGA) maintains the GeoTweet Archive, a global dataset of tweets spanning across time, geography, and language. This archive covers the period from 2010 to July 12, 2023, when Twitter transitioned its API access from free to a paid model. The archive contains approximately 10 billion multilingual tweets from around the world (see map below) and is hosted on Harvard University’s High Performance Computing (HPC) cluster.
+
+For more details about the archive and how to access it, please visit __[Geotweets Archive v2.0](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/3NCMB6)__.
 
 ![alt text](https://github.com/siacus/flourishing-i-challenge/blob/main/map_tweets_language.png)
 

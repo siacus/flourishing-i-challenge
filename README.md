@@ -34,7 +34,7 @@ You can play with a dashboard based on this data [here](https://askdataverse.shi
 
 The Harvard Center for Geographic Analysis (CGA) maintains the **GeoTweet Archive v2.0**, a global dataset of tweets spanning across time, geography, and language. This archive covers the period from 2010 to July 12, 2023, when Twitter transitioned its API access from free to a paid model. The archive contains approximately 10 billion multilingual tweets from around the world (see map below) and is hosted on Harvard University’s High Performance Computing (HPC) cluster. For more details about the archive and how to access it, please visit __[Geotweets Archive v2.0](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/3NCMB6)__.
 
-![Geotweets.png](attachment:436564cb-50cb-4798-b8b9-474169a63fe5.png)
+![Geotweets.png](https://github.com/siacus/flourishing-i-challenge/blob/main/Geotweets_distribution.png)
 
 ## Repository Contents
 

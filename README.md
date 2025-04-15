@@ -30,13 +30,16 @@ These three domains—well-being, migration mood, and corruption—are often stu
 You can play with a dashboard based on this data [here](https://askdataverse.shinyapps.io/FlourishingMap/) and the corresponding github repository is [here](https://github.com/siacus/flourishingmap).
 
 ## Repository Contents
-- [Scipts](https://github.com/siacus/flourishing-i-challenge/tree/main/scripts): These directory contain scripts for
+
+1. **[Scipts](https://github.com/siacus/flourishing-i-challenge/tree/main/scripts)**: These directory contain scripts for
 
 * finetuning of LLMs
 * classification of raw tweets
 * construction of statistical indicators
 
-These scripts should work on Anvil, Delta-AI and FASRC clusters. But read below before trying to run them. [Our notebook](https://platform.i-guide.io/notebooks/e870ad3a-8c19-43e1-8323-fb8c39d12898)(see Appendix) contains simplified set of instructions for replicability and some notes that we find useful. Some tweaking are inevitable, like changing the account, allocation, SLURM partition names and folders. These scripts assume you have an account on an ACCESS Anvil or Harvard FARSC.
+These scripts should work on Anvil, Delta-AI and FASRC clusters. But read below before trying to run them. The [Readme](https://github.com/siacus/flourishing-i-challenge/blob/main/scripts/ReadMe.md) of the scripts folder contains simplified set of instructions for replicability and some notes that we find useful. Some tweaking are inevitable, like changing the account, allocation, SLURM partition names and folders. These scripts assume you have an account on an ACCESS Anvil or Harvard FARSC.
+
+2. 
 
 
 
